@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </linearGradient>
+    <linearGradient id="chartLineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#235AE5"/>
+      <stop offset="100%" stop-color="#4f46e5"/>
+    </linearGradient>
+    <linearGradient id="areaGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#235AE5" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#235AE5" stop-opacity="0.0"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="10" stdDeviation="15" flood-color="#0f172a" flood-opacity="0.07"/>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="1200" height="500" rx="20" fill="url(#bgGrad)"/>
+  <rect x="30" y="30" width="1140" height="440" rx="20" fill="#ffffff" stroke="#e2e8f0" stroke-width="2" filter="url(#cardShadow)"/>
+
+  <!-- Visual Top Header -->
+  <text x="80" y="85" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="800" font-size="24" fill="#0f172a">
+    FREELANCER <tspan fill="#235AE5">PRODUCTIVITY & ROI</tspan> ANALYSIS
+  </text>
+
+  <!-- Floating Stats Badges -->
+  <g transform="translate(80, 120)">
+    <!-- Badge 1 -->
+    <rect width="220" height="80" rx="14" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+    <text x="20" y="32" font-family="system-ui, sans-serif" font-weight="600" font-size="12" fill="#64748b">PROPOSAL WIN RATE</text>
+    <text x="20" y="62" font-family="system-ui, sans-serif" font-weight="800" font-size="22" fill="#235AE5">94.2%</text>
+
+    <!-- Badge 2 -->
+    <rect x="240" width="220" height="80" rx="14" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+    <text x="260" y="32" font-family="system-ui, sans-serif" font-weight="600" font-size="12" fill="#64748b">DELIVERABLE SPEED</text>
+    <text x="260" y="62" font-family="system-ui, sans-serif" font-weight="800" font-size="22" fill="#235AE5">5x Faster</text>
+
+    <!-- Badge 3 -->
+    <rect x="480" width="220" height="80" rx="14" fill="#235AE5"/>
+    <text x="500" y="32" font-family="system-ui, sans-serif" font-weight="600" font-size="12" fill="#ffffff" opacity="0.8">MONTHLY TIME SAVED</text>
+    <text x="500" y="62" font-family="system-ui, sans-serif" font-weight="800" font-size="22" fill="#ffffff">+42 Hours</text>
+  </g>
+
+  <!-- Large Smooth Growth Curve Line Graphic -->
+  <g transform="translate(80, 230)">
+    <!-- Axis lines -->
+    <line x1="0" y1="180" x2="1000" y2="180" stroke="#f1f5f9" stroke-width="2"/>
+    <line x1="0" y1="120" x2="1000" y2="120" stroke="#f1f5f9" stroke-width="2"/>
+    <line x1="0" y1="60" x2="1000" y2="60" stroke="#f1f5f9" stroke-width="2"/>
+
+    <!-- Area Fill -->
+    <path d="M0 160 Q 250 140, 500 80 T 1000 20 L 1000 180 L 0 180 Z" fill="url(#areaGrad)"/>
+
+    <!-- Upward Trend Line -->
+    <path d="M0 160 Q 250 140, 500 80 T 1000 20" fill="none" stroke="url(#chartLineGrad)" stroke-width="5" stroke-linecap="round"/>
+
+    <!-- Glowing Node Circle -->
+    <circle cx="1000" cy="20" r="8" fill="#235AE5"/>
+    <circle cx="1000" cy="20" r="16" fill="#235AE5" fill-opacity="0.2"/>
+
+    <!-- Label Badges on Nodes -->
+    <rect x="910" y="-25" width="120" height="32" rx="8" fill="#235AE5"/>
+    <text x="970" y="-4" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="800" font-size="13" fill="#ffffff">+250% Growth</text>
+  </g>
+</svg>

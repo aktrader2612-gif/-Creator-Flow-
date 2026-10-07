@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </linearGradient>
+    <linearGradient id="nodeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#235AE5"/>
+      <stop offset="100%" stop-color="#1e40af"/>
+    </linearGradient>
+    <filter id="nodeShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#235AE5" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="1200" height="450" rx="20" fill="url(#bgGrad)"/>
+  <rect x="20" y="20" width="1160" height="410" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+
+  <!-- Main Banner Header -->
+  <text x="600" y="75" text-anchor="middle" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="800" font-size="26" fill="#0f172a">
+    6-STAGE <tspan fill="#235AE5">AI CONTENT WORKFLOW</tspan> PIPELINE
+  </text>
+  <text x="600" y="102" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="600" font-size="14" fill="#64748b">
+    Repeatable, High-Leverage Content Automation System
+  </text>
+
+  <!-- Horizontal Connecting Process Line -->
+  <line x1="130" y1="230" x2="1070" y2="230" stroke="#cbd5e1" stroke-width="4" stroke-dasharray="8 6"/>
+
+  <!-- 6 Step Cards -->
+  <!-- Step 1: Ideation -->
+  <g transform="translate(60, 140)">
+    <rect width="150" height="190" rx="16" fill="#ffffff" stroke="#235AE5" stroke-width="2" filter="url(#nodeShadow)"/>
+    <circle cx="75" cy="40" r="24" fill="#235AE5"/>
+    <text x="75" y="47" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="800" font-size="18" fill="#ffffff">01</text>
+    <text x="75" y="100" text-anchor="middle" stroke="none" fill="none" font-size="28">💡</text>
+    <text x="75" y="140" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="800" font-size="16" fill="#0f172a">Ideation</text>
+    <rect x="35" y="155" width="80" height="4" rx="2" fill="#235AE5"/>
+  </g>
+
+  <!-- Step 2: Outline -->
+  <g transform="translate(244, 140)">
+    <rect width="150" height="190" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="2" filter="url(#nodeShadow)"/>
+    <circle cx="75" cy="40" r="24" fill="#235AE5"/>
+    <text x="75" y="47" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="800" font-size="18" fill="#ffffff">02</text>
+    <text x="75" y="100" text-anchor="middle" font-size="28">📋</text>
+    <text x="75" y="140" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="800" font-size="16" fill="#0f172a">Outline</text>
+    <rect x="35" y="155" width="80" height="4" rx="2" fill="#3b82f6"/>
+  </g>
+
+  <!-- Step 3: Draft -->
+  <g transform="translate(428, 140)">
+    <rect width="150" height="190" rx="16" fill="#ffffff" stroke="#235AE5" stroke-width="2" filter="url(#nodeShadow)"/>
+    <circle cx="75" cy="40" r="24" fill="#235AE5"/>
+    <text x="75" y="47" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="800" font-size="18" fill="#ffffff">03</text>
+    <text x="75" y="100" text-anchor="middle" font-size="28">✍️</text>
+    <text x="75" y="140" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="800" font-size="16" fill="#0f172a">Draft</text>
+    <rect x="35" y="155" width="80" height="4" rx="2" fill="#235AE5"/>
+  </g>
+
+  <!-- Step 4: Edit -->
+  <g transform="translate(612, 140)">
+    <rect width="150" height="190" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="2" filter="url(#nodeShadow)"/>
+    <circle cx="75" cy="40" r="24" fill="#235AE5"/>
+    <text x="75" y="47" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="800" font-size="18" fill="#ffffff">04</text>
+    <text x="75" y="100" text-anchor="middle" font-size="28">🔍</text>
+    <text x="75" y="140" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="800" font-size="16" fill="#0f172a">Edit</text>
+    <rect x="35" y="155" width="80" height="4" rx="2" fill="#3b82f6"/>
+  </g>
+
+  <!-- Step 5: SEO -->
+  <g transform="translate(796, 140)">
+    <rect width="150" height="190" rx="16" fill="#ffffff" stroke="#235AE5" stroke-width="2" filter="url(#nodeShadow)"/>
+    <circle cx="75" cy="40" r="24" fill="#235AE5"/>
+    <text x="75" y="47" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="800" font-size="18" fill="#ffffff">05</text>
+    <text x="75" y="100" text-anchor="middle" font-size="28">⚡</text>
+    <text x="75" y="140" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="800" font-size="16" fill="#0f172a">SEO</text>
+    <rect x="35" y="155" width="80" height="4" rx="2" fill="#235AE5"/>
+  </g>
+
+  <!-- Step 6: Repurpose -->
+  <g transform="translate(980, 140)">
+    <rect width="150" height="190" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="2" filter="url(#nodeShadow)"/>
+    <circle cx="75" cy="40" r="24" fill="#235AE5"/>
+    <text x="75" y="47" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="800" font-size="18" fill="#ffffff">06</text>
+    <text x="75" y="100" text-anchor="middle" font-size="28">🔄</text>
+    <text x="75" y="140" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="800" font-size="16" fill="#0f172a">Repurpose</text>
+    <rect x="35" y="155" width="80" height="4" rx="2" fill="#3b82f6"/>
+  </g>
+
+  <!-- Bottom Visual Accent Bar -->
+  <rect x="60" y="370" width="1070" height="36" rx="12" fill="#235AE5"/>
+  <text x="600" y="393" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="700" font-size="13" fill="#ffffff">
+    ⚡ High-Speed Pipeline  •  Copy-Paste Automation  •  Multichannel Distribution
+  </text>
+</svg>
