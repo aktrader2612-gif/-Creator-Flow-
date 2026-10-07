@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instant AI Prompt Builder & Customizer | CreatorFlow</title>
+  <meta name="description" content="Generate customized, high-converting AI prompts tailored to your freelance role, project goal, and client details in seconds.">
+  <meta name="keywords" content="AI Prompt Builder, Prompt Customizer, Proposal Generator, ChatGPT prompt generator, Freelance prompt tool">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#235AE5">
+  <link rel="canonical" href="https://creator-flow-3ej.pages.dev/builder.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Instant AI Prompt Builder & Customizer | CreatorFlow">
+  <meta property="og:description" content="Generate customized, high-converting AI prompts tailored to your freelance role, project goal, and client details in seconds.">
+  <meta property="og:url" content="https://creator-flow-3ej.pages.dev/builder.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <div class="brand-icon-wrapper">
+          <svg class="brand-svg-logo" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="32" height="32" rx="9" fill="#ffffff" fill-opacity="0.2"/>
+            <path d="M18 6L9 17H15L14 26L23 15H17L18 6Z" fill="#ffffff" stroke="#ffffff" stroke-width="1.2" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <span>Creator<strong>Flow</strong></span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html">Home Hub</a>
+        <a href="prompts.html">Prompts Library</a>
+        <a href="builder.html" class="active">Prompt Builder</a>
+        <a href="workflow.html">6-Stage Workflow</a>
+        <a href="faq.html">FAQs</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="builder.html" class="btn btn-primary">Build Prompt</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section" style="padding: 4rem 0 3rem; background: #ffffff;">
+      <div class="container hero-content">
+        <div class="badge">Live Generator Tool</div>
+        <h1 class="hero-title" style="font-size: 2.8rem; color: #0f172a;">
+          Instant <span class="gradient-text">AI Prompt Builder</span>
+        </h1>
+        <p class="hero-subtitle" style="max-width: 760px; color: #475569;">
+          Customize structured AI prompt formulas tailored to your specific role, client niche, tone, and deliverables. Copy and paste directly into ChatGPT, Claude, or Gemini.
+        </p>
+
+        <!-- Builder Showcase Image -->
+        <div class="hero-image-wrapper" style="margin-top: 2rem; max-width: 900px;">
+          <img src="assets/images/freelance_growth.jpg" alt="Freelancer Growth & AI Prompt Performance Dashboard" class="hero-preview-img" loading="eager">
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Generator Form -->
+    <section id="generator" class="generator-section" style="padding: 3rem 0 5rem; background: #f8fafc;">
+      <div class="container">
+        <!-- Builder Subtitle with Contextual In-Text Links -->
+        <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 1.5rem 2rem; margin: 0 auto 2.5rem; max-width: 900px; text-align: center;">
+          <p style="color: #475569; font-size: 1.05rem; line-height: 1.7;">
+            The instant AI prompt builder on the <a href="index.html" style="color: #235AE5; text-decoration: underline; font-weight: 600;">CreatorFlow Home Hub</a> generates custom prompt formulas for your specific client deliverables. Explore our <a href="prompts.html" style="color: #235AE5; text-decoration: underline; font-weight: 600;">curated prompts library</a> or study the <a href="workflow.html" style="color: #235AE5; text-decoration: underline; font-weight: 600;">6-stage workflow system</a>. Powered for <a href="https://chatgpt.com" target="_blank" rel="noopener" style="color: #235AE5; text-decoration: underline; font-weight: 600;">OpenAI ChatGPT</a>, Claude, and Gemini.
+          </p>
+        </div>
+
+        <div class="generator-card">
+          <div class="generator-header">
+            <h2>Configure Your Custom AI Prompt</h2>
+            <p>Select parameters below to build an optimized prompt instantly.</p>
+          </div>
+
+          <div class="generator-form-grid">
+            <div class="form-group">
+              <label for="prompt-role">Your Role / Specialty</label>
+              <select id="prompt-role" class="form-select">
+                <option value="Freelance Web Designer">Freelance Web Designer</option>
+                <option value="Content Creator & Copywriter">Content Creator & Copywriter</option>
+                <option value="Senior Software Developer">Senior Software Developer</option>
+                <option value="Social Media Marketer">Social Media Marketer</option>
+                <option value="Virtual Assistant / Data Analyst">Virtual Assistant / Data Analyst</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="prompt-goal">Target Deliverable / Goal</label>
+              <select id="prompt-goal" class="form-select">
+                <option value="High-Converting Client Proposal">High-Converting Client Proposal</option>
+                <option value="Viral Social Media Hook & Post">Viral Social Media Hook & Post</option>
+                <option value="Cold Outreach Email with Personalization">Cold Outreach Email with Personalization</option>
+                <option value="Code Optimization & Bug Fix">Code Optimization & Bug Fix</option>
+                <option value="SEO-Optimized Blog Outline">SEO-Optimized Blog Outline</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="prompt-tone">Tone of Voice</label>
+              <select id="prompt-tone" class="form-select">
+                <option value="Professional & Persuasive">Professional & Persuasive</option>
+                <option value="Casual & Conversational">Casual & Conversational</option>
+                <option value="Direct & Analytical">Direct & Analytical</option>
+                <option value="Authoritative & Confident">Authoritative & Confident</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="prompt-topic">Client Details / Project Context</label>
+              <input type="text" id="prompt-topic" class="form-input" placeholder="e.g. Redesigning checkout funnel for e-commerce fitness brand">
+            </div>
+          </div>
+
+          <button id="generate-prompt-btn" class="btn btn-primary btn-block">
+            Generate Optimized Prompt
+          </button>
+
+          <!-- Result Box -->
+          <div class="generator-result-wrapper" id="result-wrapper">
+            <div class="result-top">
+              <span><strong>Generated Prompt Formula:</strong></span>
+              <button class="btn btn-secondary btn-sm" id="copy-generated-btn">
+                Copy Prompt
+              </button>
+            </div>
+            <pre class="result-text" id="generated-output">Click "Generate Optimized Prompt" above to see the custom prompt formula.</pre>
+          </div>
+        </div>
+
+        <!-- AI Workflow Hub Interface Preview Image Banner -->
+        <div class="workflow-visual-banner" style="margin-top: 3rem; max-width: 900px; margin-left: auto; margin-right: auto;">
+          <img src="assets/images/hero_dashboard.jpg" alt="AI Workflow Hub Interactive Dashboard Preview" class="workflow-banner-img" loading="lazy">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <div class="logo">
+          <div class="brand-icon-wrapper">
+            <svg class="brand-svg-logo" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="32" height="32" rx="9" fill="#ffffff" fill-opacity="0.2"/>
+              <path d="M18 6L9 17H15L14 26L23 15H17L18 6Z" fill="#ffffff" stroke="#ffffff" stroke-width="1.2" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <span>Creator<strong>Flow</strong></span>
+        </div>
+        <p>Instant AI Prompt Builder & Customizer. Build high-converting prompt formulas in seconds.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Internal Navigation</h4>
+        <a href="index.html">Home Hub</a>
+        <a href="prompts.html">Prompts Library</a>
+        <a href="builder.html">Prompt Builder</a>
+        <a href="workflow.html">6-Stage Workflow</a>
+        <a href="faq.html">FAQs</a>
+      </div>
+
+      <div class="footer-links">
+        <h4>External Resources</h4>
+        <a href="https://chatgpt.com" target="_blank" rel="noopener">OpenAI ChatGPT</a>
+        <a href="https://claude.ai" target="_blank" rel="noopener">Anthropic Claude</a>
+        <a href="https://gemini.google.com" target="_blank" rel="noopener">Google Gemini</a>
+        <a href="https://midjourney.com" target="_blank" rel="noopener">Midjourney AI</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container bottom-flex">
+        <p>&copy; 2026 CreatorFlow. All rights reserved.</p>
+        <p>Instant AI Prompt Generator Tool</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast & Script -->
+  <div id="toast" class="toast">
+    <span id="toast-msg">Custom prompt copied to clipboard!</span>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

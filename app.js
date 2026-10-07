@@ -335,9 +335,11 @@ const promptToneSelect = document.getElementById('prompt-tone');
 const promptTopicInput = document.getElementById('prompt-topic');
 const generatedOutput = document.getElementById('generated-output');
 const copyGeneratedBtn = document.getElementById('copy-generated-btn');
+const viewAllPromptsBtn = document.getElementById('view-all-prompts-btn');
 
 let currentCategory = 'all';
 let searchQuery = '';
+let showAllPrompts = false;
 
 // Initialize on DOM Ready
 document.addEventListener('DOMContentLoaded', () => {
@@ -345,7 +347,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupEventListeners();
 });
 
-// Render Prompts Grid (Without any badges or tags)
+// Render Prompts Grid (3 by default, expand on View All)
 function renderPrompts() {
   const filteredPrompts = PROMPTS_DATA.filter(item => {
     const matchesCategory = currentCategory === 'all' || item.category === currentCategory;
@@ -356,11 +358,27 @@ function renderPrompts() {
     return matchesCategory && matchesSearch;
   });
 
+  const shouldLimit = !showAllPrompts && searchQuery === '';
+  const visiblePrompts = shouldLimit ? filteredPrompts.slice(0, 3) : filteredPrompts;
+
   if (promptCountEl) {
-    promptCountEl.textContent = `Showing ${filteredPrompts.length} prompt${filteredPrompts.length === 1 ? '' : 's'}`;
+    if (shouldLimit && filteredPrompts.length > 3) {
+      promptCountEl.textContent = `Showing 3 of ${filteredPrompts.length} prompts`;
+    } else {
+      promptCountEl.textContent = `Showing ${filteredPrompts.length} prompt${filteredPrompts.length === 1 ? '' : 's'}`;
+    }
   }
 
-  if (filteredPrompts.length === 0) {
+  if (viewAllPromptsBtn) {
+    if (searchQuery !== '') {
+      viewAllPromptsBtn.style.display = 'none';
+    } else {
+      viewAllPromptsBtn.style.display = 'inline-flex';
+      viewAllPromptsBtn.innerHTML = showAllPrompts ? 'Show Less &uarr;' : 'View All Prompts &rarr;';
+    }
+  }
+
+  if (visiblePrompts.length === 0) {
     promptsContainer.innerHTML = `
       <div class="empty-state">
         <h3>No prompts found matching "${searchQuery}"</h3>
@@ -370,7 +388,7 @@ function renderPrompts() {
     return;
   }
 
-  promptsContainer.innerHTML = filteredPrompts.map((item, index) => `
+  promptsContainer.innerHTML = visiblePrompts.map((item, index) => `
     <div class="prompt-card animated-fade-in" style="animation-delay: ${Math.min(index * 0.05, 0.5)}s;" data-id="${item.id}">
       <div class="card-inner-top">
         <div class="card-top">
@@ -416,6 +434,17 @@ function showToast(msg) {
 
 // Setup Event Listeners
 function setupEventListeners() {
+  // View All Prompts Button Listener
+  if (viewAllPromptsBtn) {
+    viewAllPromptsBtn.addEventListener('click', () => {
+      showAllPrompts = !showAllPrompts;
+      renderPrompts();
+      if (!showAllPrompts) {
+        document.getElementById('prompts').scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  }
+
   // Category Filter Pills
   categoryFilterBtns.forEach(btn => {
     btn.addEventListener('click', () => {

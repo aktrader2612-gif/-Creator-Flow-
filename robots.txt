@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://creatorflow.com/sitemap.xml
+Sitemap: https://creator-flow-3ej.pages.dev/sitemap.xml
